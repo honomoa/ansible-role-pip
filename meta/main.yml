@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: pip
   author: honomoa
   description: The PyPA recommended tool for installing Python packages.
   company: "Moa"
