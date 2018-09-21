@@ -17,7 +17,7 @@ php_packages: []
       - awscli
       - boto
   roles:
-    - { role: moa.pip }
+    - { role: honomoa.pip }
 ```
 
 # License
