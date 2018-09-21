@@ -1,0 +1,11 @@
+---
+
+- name: Install PIP
+  apt: pkg={{ item }}
+  with_items:
+    - python-dev
+    - python-pip
+
+- name: Install packages from PIP
+  pip: name={{ item }} state=latest
+  with_items: "{{ pip_packages }}"
