@@ -1,4 +1,6 @@
 ---
 
+is_synology_dsm: "{{ ansible_devices.synoboot is defined and ansible_devices.synoboot.model == 'DiskStation' and ansible_devices.synoboot.vendor == 'Synology' }}"
+
 pip_packages: []
   # - awscli

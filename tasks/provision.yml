@@ -5,6 +5,17 @@
   with_items:
     - python-dev
     - python-pip
+  when: not is_synology_dsm
+
+- name: Download PIP install script
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: /tmp/get-pip.py
+  when: is_synology_dsm
+
+- name: Run PIP install script
+  shell: 'python /tmp/get-pip.py'
+  when: is_synology_dsm
 
 - name: Install packages from PIP
   pip: name={{ item }} state=latest

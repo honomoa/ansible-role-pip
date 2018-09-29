@@ -13,6 +13,9 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - xenial
+  - name: Synology
+    versions:
+    - DSM6
   galaxy_tags:
     - development
     - python
