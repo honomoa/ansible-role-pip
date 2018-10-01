@@ -13,6 +13,7 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - xenial
+    - trusty
   - name: Synology
     versions:
     - DSM6
