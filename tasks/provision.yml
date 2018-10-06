@@ -1,12 +1,5 @@
 ---
 
-- name: Install PIP
-  apt: pkg={{ item }}
-  with_items:
-    - python-dev
-    - python-pip
-  when: not is_synology_dsm
-
 - name: Download PIP install script
   get_url:
     url: https://bootstrap.pypa.io/get-pip.py
