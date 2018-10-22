@@ -6,7 +6,11 @@ The PyPA recommended tool for installing Python packages.
 
 # Role Variables
 
-php_packages: []
+```
+pip_packages: []
+```
+
+pip packages to install.
 
 # Example Playbook
 
