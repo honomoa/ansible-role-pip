@@ -11,5 +11,4 @@
   when: is_synology_dsm
 
 - name: Install packages from PIP
-  pip: name={{ item }} state=latest
-  with_items: "{{ pip_packages }}"
+  pip: name={{ pip_packages }} state=latest
