@@ -1,14 +1,19 @@
 ---
 
+- name: Find pip installation
+  shell: 'which pip'
+  register: pip_installation
+  ignore_errors: yes
+
 - name: Download PIP install script
   get_url:
     url: https://bootstrap.pypa.io/get-pip.py
     dest: /tmp/get-pip.py
-  when: is_synology_dsm
+  when: ! pip_installation or pip_installation.stdout == ""
 
 - name: Run PIP install script
   shell: 'python /tmp/get-pip.py'
-  when: is_synology_dsm
+  when: ! pip_installation or pip_installation.stdout == ""
 
 - name: Install packages from PIP
   pip: name={{ pip_packages }} state=present
